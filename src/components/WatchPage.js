@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils/appSlice";
 import { useLocation } from "react-router-dom";
 import CommentContainer from "./CommentContainer";
+import ChatBox from "./ChatBox";
 
 const WatchPage = () => {
   const location = useLocation(); //useLocation from react-router-dom:
@@ -27,10 +28,10 @@ const WatchPage = () => {
   const youtubeUrl = `https://www.youtube.com/embed/${videoId}`;
 
   return (
-    <div>
+    <div className=" m-8 ml-36 ">
       <iframe
-        width="560"
-        height="315"
+        width="1040"
+        height="585"
         src={youtubeUrl}
         title="YouTube video player"
         frameBorder="0"
@@ -38,6 +39,7 @@ const WatchPage = () => {
         allowFullScreen
       ></iframe>
       <CommentContainer/>
+      <ChatBox/>
     </div>
   );
 };

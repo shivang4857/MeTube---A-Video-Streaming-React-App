@@ -2,6 +2,7 @@ import React, { useState ,useEffect} from 'react'
 import { useDispatch } from 'react-redux'
 import { toogleMenu } from '../utils/appSlice';
 import { YOUTUBE_SEARCH_API } from '../utils/constant';
+import { MY_IMAGE } from '../utils/constant';
 
 const Header = () => {
    
@@ -48,6 +49,12 @@ const Header = () => {
       src='https://p7.hiclipart.com/preview/616/930/362/hamburger-button-computer-icons-menu-bar-line.jpg' />
       </div>
       <div>
+        <img className=' w-16 h-6' 
+        alt = "hello"
+        src = '.\public\metube.jpg' />
+      </div>
+      
+      <div>
         <a href='/'>
       <img className='w-36 h-32'
       alt ="Not Found"
@@ -71,7 +78,7 @@ const Header = () => {
           <ul>
           
           {suggestion?.map((suggestionItem) => (
-  <li key={suggestionItem /* unique identifier for each suggestion */}>
+  <li  className="cursor-pointer" key={suggestionItem /* unique identifier for each suggestion */}>
     🔍{suggestionItem}
   </li>
 ))}
