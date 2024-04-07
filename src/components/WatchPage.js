@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils/appSlice";
 import { useLocation } from "react-router-dom";
-import CommentContainer from "./CommentContainer";
+
 import ChatBox from "./ChatBox";
 
 const WatchPage = () => {
@@ -28,18 +28,25 @@ const WatchPage = () => {
   const youtubeUrl = `https://www.youtube.com/embed/${videoId}`;
 
   return (
-    <div className=" m-8 ml-36 ">
-      <iframe
-        width="1040"
-        height="585"
+    <div className=" m-8 ml-36  flex">
+      <div>
+      <iframe className=" rounded-sm"
+        width="800"  
+        height="450"  
         src={youtubeUrl}
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-      ></iframe>
-      <CommentContainer/>
+        
+      ></iframe> 
+      </div>
+      <div>
+       <h1 className="font-bold">comments</h1>
+      <div >
       <ChatBox/>
+      </div>
+    </div>
     </div>
   );
 };

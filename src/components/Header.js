@@ -42,17 +42,13 @@ const Header = () => {
 
   }
   return (
-    <div className='flex  space-x-28 shadow-lg'>
+    <div className='flex  space-x-28 shadow-lg mt-5'>
       <div>
-      <img className='w-10 h-10 cursor-pointer' onClick={() => toogleMenuBar()}
+      <img className='w-10 h-10 cursor-pointer h-10' onClick={() => toogleMenuBar()}
       alt='hk'
       src='https://p7.hiclipart.com/preview/616/930/362/hamburger-button-computer-icons-menu-bar-line.jpg' />
       </div>
-      <div>
-        <img className=' w-16 h-6' 
-        alt = "hello"
-        src = '.\public\metube.jpg' />
-      </div>
+      
       
       <div>
         <a href='/'>
