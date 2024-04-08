@@ -33,6 +33,12 @@ const Header = () => {
       console.error('Error fetching suggestions:', error);
     }
   };
+
+  const getSearchResult = (tag) => {
+    alert(tag)
+  };
+
+  
   // code to automatically close the sidebar by dispaching an action to close the side bar
   const dispatch= useDispatch();
 
@@ -44,7 +50,7 @@ const Header = () => {
   return (
     <div className='flex  space-x-28 shadow-lg mt-5'>
       <div>
-      <img className='w-10 h-10 cursor-pointer h-10' onClick={() => toogleMenuBar()}
+      <img className='w-10 h-10 cursor-pointer ' onClick={() => toogleMenuBar()}
       alt='hk'
       src='https://p7.hiclipart.com/preview/616/930/362/hamburger-button-computer-icons-menu-bar-line.jpg' />
       </div>
@@ -64,7 +70,7 @@ const Header = () => {
            value={searchQuery}
            onChange={(e) => setSearchQuery(e.target.value)}
            onFocus={() => SetshowSuggestion(true)}
-           onBlur={() => SetshowSuggestion(false)}
+           //onBlur={() => SetshowSuggestion(false)}
           
           />
           <button className='bg-slate-100 rounded-r-xl w-12 h-12'>🔍</button>
@@ -74,9 +80,11 @@ const Header = () => {
           <ul>
           
           {suggestion?.map((suggestionItem) => (
-  <li  className="cursor-pointer" key={suggestionItem /* unique identifier for each suggestion */}>
+            <div  key={suggestionItem }>
+    <button className="cursor-pointer " onClick={() => {getSearchResult(suggestionItem)}} type = "text " >
     🔍{suggestionItem}
-  </li>
+  </button>
+  </div>
 ))}
 
       </ul>
