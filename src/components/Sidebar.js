@@ -13,7 +13,7 @@ const Sidebar = () => {
     <div className="col col-span-1 p-4 shadow-md">
       <ul>
         
-        <li><Link to={"/"}>home</Link></li>
+        <li className="font-bold"><Link to={"/"}>home</Link></li>
         <li>shorts</li>
         <li>live</li>
         <li>videos</li>

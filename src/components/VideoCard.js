@@ -22,7 +22,7 @@
          
          <li className='font-bold'>{title}</li>
          <li>{channelTitle}</li>
-         <li className='font-serif'>view:{statistics.viewCount}</li>
+         {/* <li className='font-serif'>view:{statistics.viewCount}</li> */}
         </ul> 
 
        

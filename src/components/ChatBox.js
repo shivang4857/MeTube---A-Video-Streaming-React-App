@@ -24,7 +24,7 @@ const ChatBox = () => {
     })
     
    )
-  },2000)
+  },6000)
 
   return () => clearInterval(i)
 

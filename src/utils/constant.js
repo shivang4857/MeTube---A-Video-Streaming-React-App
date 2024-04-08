@@ -7,4 +7,4 @@
  export const MY_IMAGE = 'public/metube.png'
 
   
-//  const YOUTUBE_SEARCH_VIDEO_API = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&key=AIzaSyBVLjrE7K1vB4yiczuhA5337DIc4DkOQSI&q=tech"
+export const YOUTUBE_SEARCH_VIDEO_API = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&key=AIzaSyBVLjrE7K1vB4yiczuhA5337DIc4DkOQSI&q="
