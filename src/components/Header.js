@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setCategory, toogleMenu } from "../utils/appSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constant";
-import { MY_IMAGE } from "../utils/constant";
+
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -24,7 +24,7 @@ const Header = () => {
 
   const getSearchSuggestion = async () => {
     try {
-      const response = await fetch(YOUTUBE_SEARCH_API + searchQuery);
+      const response = await fetch(YOUTUBE_SEARCH_API+searchQuery);
       if (!response.ok) {
         throw new Error("Failed to fetch suggestions");
       }
