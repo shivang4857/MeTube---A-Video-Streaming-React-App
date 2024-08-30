@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: metube
+  labels:
+    app: metube
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: metube
+  template:
+    metadata:
+      labels:
+        app: metube
+    spec:
+      containers:
+      - name: metube
+        image: shivang4857/metube:{{ .Values.image.tag }}
+        ports:
+        - containerPort: 3000
